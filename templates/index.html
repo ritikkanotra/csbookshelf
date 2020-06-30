@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  
+  {% include "includes.html" %}
+
+  <title>BookShelf.com</title>
+
+</head>
+
+<style>
+  .hide {
+    display: none;
+  }
+</style>
+
+<body>
+  
+
+  {% include "header.html" %}
+
+
+  <div class="banner">
+    <!-- <img src="../res/1320.jpg" alt="homepage-banner"> -->
+    <img src="{{ url_for('static', filename='assets/images/1733v1.jpg') }} " alt="homepage-banner">
+    <!-- <img src="../res/neon-library.jpg" alt="homepage-banner"> -->
+  </div>
+  <div class="category-name">
+    <h1>Popular Books</h1>
+  </div>
+
+  <div class="card-container">
+
+    <!-- <div id="ritik">RITIK</div> -->
+
+    {% for row in rows %}
+
+      <div class="card">
+        <img class="card-img-top" src="{{ row['img'] }}" alt="Card image" style="width:100%">
+        <div class="card-body">         
+          <br>
+          <form action="/book" method="post">
+            <input class="hide" type="text" name="bookid" value="{{ row['id'] }}">
+            <button type="submit" class="btn btn-default"><b>{{ row['title'] }}<br>{{ row['author'] }}</b></button>
+          </form>
+        </div>
+      </div>
+
+    {% endfor %}
+
+
+  </div>
+
+  {% include "footer.html" %}
+
+</body>
+
+</html>

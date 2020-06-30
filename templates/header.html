@@ -1,0 +1,58 @@
+<style>
+  .hide{
+    display: none;
+  }
+
+  button {
+    width: 100%;
+  }
+</style>
+
+<div class="header">
+    <nav class="navbar navbar-light" style="margin-bottom: 0; border-radius: 0;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand">
+            <b>BookShelf.com</b></a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+              <li>
+                <form action="/category" method="post">
+                  <input class="hide" type="text" name=category value="C">
+                  <button type="submit">C</button>
+                </form>
+              </li>
+              <li>
+                <form action="/category" method="post">
+                  <input class="hide" type="text" name=category value="CPP">
+                  <button type="submit">C++</button>
+                </form>
+              </li>
+              <li>
+                <form action="/category" method="post">
+                  <input class="hide" type="text" name=category value="Java">
+                  <button type="submit">Java</button>
+                </form>
+              </li>
+              <li>
+                <form action="/category" method="post">
+                  <input class="hide" type="text" name=category value="Python">
+                  <button type="submit">Python</button>
+                </form>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/about">About</a></li>
+          <li><a href="mailto:bookshelf.appodex@gmail.com?subject=Feedback%20for%20BookShelf.com">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a>{{ name }}</a></li>
+          <li><a href="/logout"><span class="glyphicon glyphicon-user"></span>&nbsp&nbspLogout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>

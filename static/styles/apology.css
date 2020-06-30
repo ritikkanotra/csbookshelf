@@ -1,0 +1,25 @@
+.fullscreen-div {
+    position: absolute;
+    text-align: center;
+    width: 98%;
+    height: 98%;
+}
+
+.confirm-screen {
+    font-size: x-large;
+    /* font-family: 'MuseoModerno', cursive; */
+    font-family: cursive;
+}
+
+.my-centered {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+}
+
+.redirecting {
+    font-weight: bolder;
+    color: black;
+}

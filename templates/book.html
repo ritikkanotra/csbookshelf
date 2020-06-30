@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Introduction to C & GUI Progrommaing - Simon Long</title>
+    
+    {% include "includes.html" %}
+
+  </head>
+
+  <style>
+    body h1 {
+      color: rgb(17, 65, 145);
+      border: solid rgb(17, 65, 145);
+      background: rgba(101, 178, 238, 0.15);
+      border-width: 2px 4px;
+    }
+
+    .card {
+      border: solid rgb(17, 65, 145);
+      background: rgba(101, 178, 238, 0.15);
+      border-width: 1px;
+    }
+  </style>
+
+  <body>
+
+    <!-- <div id="ritik">RITIK</div> -->
+
+    {% include "header.html" %}
+
+    <div class="category-name">
+      <h1>{{ title }} - {{ author }}</h1>
+    </div>
+
+    <div class="card-container">
+
+
+        <div class="card" style="top:0; bottom: 0; left: 0; right: 0; margin: auto">
+        <img class="card-img-top" src="{{ img }}" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <br>
+          <a href="{{ download }}" class="btn btn-primary"><b>Download</b></a>
+        </div>
+      </div>
+
+        <!-- Add more books here -->
+
+    </div>
+
+    {% include "footer.html" %}
+
+  </body>
+</html>
