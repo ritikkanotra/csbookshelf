@@ -6,7 +6,7 @@
 }
 
 .confirm-screen {
-    font-size: x-large;
+    font-size: 30px;
     /* font-family: 'MuseoModerno', cursive; */
     font-family: cursive;
 }
@@ -22,4 +22,11 @@
 .redirecting {
     font-weight: bolder;
     color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .confirm-screen {
+        font-size: 60px;
+    }
+
 }
