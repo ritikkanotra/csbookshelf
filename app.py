@@ -102,3 +102,17 @@ def category():
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+@app.route("/search", methods=["post"])
+def search():
+    query = request.form.get('search_query')
+
+    search_query_sql = "SELECT * FROM books WHERE LOWER(title) LIKE :query OR LOWER(author) LIKE :query;"
+
+    rows = mydb.execute(search_query_sql, query='%' + query.lower() + '%')
+    if len(rows) == 0:
+        return render_template("apology.html", msg="No books found!", back="/")
+
+    return render_template("category.html", category="Found", rows=rows)
+
+

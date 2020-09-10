@@ -9,16 +9,21 @@
   <style>
     body h1 {
       color: rgb(17, 65, 145);
-      border: solid rgb(17, 65, 145);
+      {#border: solid rgb(17, 65, 145);#}
       /* background: rgba(101, 178, 238, 0.15); */
-      border-width: 0.5px 0px;
+      {#border-width: 0.5px 0px;#}
     }
 
     .card {
       /* border: solid rgb(17, 65, 145); */
-      background: rgba(101, 178, 238, 0.15);
+      {#background: rgba(101, 178, 238, 0.15);#}
       /* border-width: 1px; */
     }
+
+    .footer-small {
+        margin-top: 50%;
+    }
+
   </style>
 
   <body>
@@ -39,7 +44,7 @@
               <br>
               <form action="/book" method="post">
                 <input class="hide" type="text" name="bookid" value="{{ row['id'] }}">
-                <button type="submit" class="btn btn-default"><b>{{ row['title'] }}<br>{{ row['author'] }}</b></button>
+                <button type="submit" class="btn btn-default btn-text"><b>{{ row['title'] }}<br>{{ row['author'] }}</b></button>
               </form>
             </div>
           </div>

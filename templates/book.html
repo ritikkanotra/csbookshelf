@@ -9,17 +9,22 @@
 
   <style>
     body h1 {
-      color: rgb(17, 65, 145);
-      border: solid rgb(17, 65, 145);
-      background: rgba(101, 178, 238, 0.15);
-      border-width: 2px 4px;
+      {#color: rgb(17, 65, 145);#}
+      {#border: solid rgb(17, 65, 145);#}
+      {#background: rgba(101, 178, 238, 0.15);#}
+      {#border-width: 2px 4px;#}
     }
 
     .card {
-      border: solid rgb(17, 65, 145);
-      background: rgba(101, 178, 238, 0.15);
-      border-width: 1px;
+      {#border: solid rgb(17, 65, 145);#}
+      {#background: rgba(101, 178, 238, 0.15);#}
+      {#border-width: 1px;#}
     }
+
+    .footer-small {
+        margin-top: 50%;
+    }
+
   </style>
 
   <body>
@@ -39,7 +44,7 @@
         <img class="card-img-top" src="{{ img }}" alt="Card image" style="width:100%">
         <div class="card-body">
           <br>
-          <a href="{{ download }}" class="btn btn-primary"><b>Download</b></a>
+          <a href="{{ download }}" class="btn btn-primary btn-text"><b>Download</b></a>
         </div>
       </div>
 

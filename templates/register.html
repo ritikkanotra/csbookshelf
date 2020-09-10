@@ -4,14 +4,19 @@
 
     <head>
         <title>Register</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/images/favicon/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/images/favicon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='assets/images/favicon/favicon-16x16.png') }}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}" />
     </head>
     
     <body>
         <div class="register-form card">
             <div class="heading">
-                <b>Register</b> to BookShelf.com
+                <b>Register</b> to <div style="display: inline-block; font-family: 'Righteous', cursive;">CS BookShelf.com</div>
             </div>
             <form action="/register" method="post">
                 <div class="form-group">

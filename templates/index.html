@@ -21,11 +21,11 @@
   {% include "header.html" %}
 
 
-  <div class="banner">
-    <!-- <img src="../res/1320.jpg" alt="homepage-banner"> -->
-    <img src="{{ url_for('static', filename='assets/images/1733v1.jpg') }} " alt="homepage-banner">
-    <!-- <img src="../res/neon-library.jpg" alt="homepage-banner"> -->
-  </div>
+{#  <div class="banner">#}
+{#    <!-- <img src="../res/1320.jpg" alt="homepage-banner"> -->#}
+{#    <img src="{{ url_for('static', filename='assets/images/1733v1.jpg') }} " alt="homepage-banner">#}
+{#    <!-- <img src="../res/neon-library.jpg" alt="homepage-banner"> -->#}
+{#  </div>#}
   <div class="category-name">
     <h1>Popular Books</h1>
   </div>
@@ -42,7 +42,7 @@
           <br>
           <form action="/book" method="post">
             <input class="hide" type="text" name="bookid" value="{{ row['id'] }}">
-            <button type="submit" class="btn btn-default"><b>{{ row['title'] }}<br>{{ row['author'] }}</b></button>
+            <button type="submit" class="btn btn-default btn-text"><b>{{ row['title'] }}<br>{{ row['author'] }}</b></button>
           </form>
         </div>
       </div>
